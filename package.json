@@ -1,0 +1,17 @@
+{
+  "name": "hideme-app",
+  "version": "1.0.0",
+  "description": "Hide Me - Hide and extract secret text inside files",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "install-all": "npm install && npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "check-db": "npm --prefix server run check-db"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
